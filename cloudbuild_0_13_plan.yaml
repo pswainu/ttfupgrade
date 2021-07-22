@@ -9,5 +9,3 @@ steps:
       - validate
   - name: hashicorp/terraform:0.13.0
     args: ["plan"]
-  - name: hashicorp/terraform:0.13.0
-    args: ["apply", "-auto-approve"]

@@ -1,4 +1,9 @@
 steps:
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gsutil
+    args: ["cp", "gs://terraform-upgrade/default.tfstate", "gs://terraform-upgrade/tf/"]
+    
+ 
   - name: hashicorp/terraform:0.13.0
     args:
       - init
