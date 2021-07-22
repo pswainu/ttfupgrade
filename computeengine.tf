@@ -1,7 +1,7 @@
 resource "google_compute_instance" "appserver" {
   name = "terraform-upgrade-testing-1"
   machine_type = "f1-micro"
-  tags        = ["test1"]
+  tags        = ["test2"]
   
 
   boot_disk {
