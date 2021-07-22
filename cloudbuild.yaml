@@ -1,0 +1,13 @@
+steps:
+  - name: hashicorp/terraform:0.12.29
+    args:
+      - init
+      - -backend=true
+      - -backend-config=bucket=terraform-upgrade
+  - name: hashicorp/terraform:0.12.29
+    args:
+      - validate
+  - name: hashicorp/terraform:0.12.29
+    args: ["plan"]
+  - name: hashicorp/terraform:0.12.29
+    args: ["apply", "-auto-approve"]
